@@ -31,6 +31,37 @@ This project is part of a QA Automation assignment. It focuses on testing the Fi
 - `features` – Gherkin feature files
 - `hooks` – Browser setup and teardown
 
+## Project Architecture
+
+The project follows a simple Page Object Model (POM) structure to keep the automation code organized and easy to maintain.
+
+```text
+FielForceConnect-QA
+│
+├── src/test/java
+│   └── com.fieldforce.qa
+│       ├── hooks          - Browser setup and closing
+│       ├── pages          - Interactions with application pages
+│       ├── stepdefinitions - Actions performed during tests
+│       ├── runners        - Executes test scenarios
+│       └── utilities      - Reusable helper methods
+│
+├── src/test/resources
+│   └── features           - Test scenarios written in simple English
+│
+├── pom.xml                - Project dependencies and configuration
+└── README.md              - Project documentation
+```
+
+### How It Works
+
+1. **Feature Files:** Describe what needs to be tested in simple English.
+2. **Step Definitions:** Connect each test step to Java code.
+3. **Page Objects:** Handle browser actions such as clicking buttons and entering data.
+4. **Hooks:** Start and close the browser before and after tests.
+5. **Test Runner:** Executes the test scenarios and reports results.
+
+
 ## How to Run
 
 Clone the repository:
@@ -55,5 +86,7 @@ FFC_VALID_PASSWORD=your_password
 ```
 
 Do not commit credentials to GitHub.
+
+
 
 
